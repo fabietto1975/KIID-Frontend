@@ -24,11 +24,51 @@ namespace KIID_Frontend
     /// </summary>
     public partial class MainWindow : Window
     {
-        private string template;
-        private string datafile;
+        private string _template;
+        private string _datafile;
         private string outputfolder;
         private string language;
         private DateTime datagenerazione;
+
+
+        private string template
+        {
+            get
+            {
+                return _template;
+            }
+            set
+            {
+                _template = value;
+                chkDati();
+            }
+
+        }
+        private string datafile
+        {
+            get
+            {
+                return _datafile;
+            }
+            set
+            {
+                _datafile = value;
+                chkDati();
+            }
+
+        }
+
+        private void chkDati()
+        {
+            if (!string.IsNullOrEmpty(_template) & !string.IsNullOrEmpty(_datafile))
+            {
+                btnEsegui.IsEnabled = true;
+            }
+            else
+            {
+                btnEsegui.IsEnabled = false;
+            }
+        }
         public MainWindow()
         {
             InitializeComponent();
@@ -36,21 +76,23 @@ namespace KIID_Frontend
 
         private void BtnScegliWord(object sender, RoutedEventArgs e)
         {
-            ScegliDocumento doc = new scegliDocumentoWord();
-            template = doc.scegliDocumento();
-            //MessageBox.Show(docTemplatePath);
+            string appPath = AppDomain.CurrentDomain.BaseDirectory.ToString() + "TEMPLATE";
+            ScegliDocumento doc = new ScegliDocumentoWord(appPath);
+            template = doc.path;
+            lblTemplate.Content = template.Substring(template.LastIndexOf(@"\") + 1);
         }
         private void BtnScegliExcel(object sender, RoutedEventArgs e)
         {
-            ScegliDocumento doc = new scegliDocumentoExcel();
-            datafile = doc.scegliDocumento();
-            //MessageBox.Show(datafile);
+            string appPath = AppDomain.CurrentDomain.BaseDirectory.ToString() + "INPUT";
+            ScegliDocumento doc = new ScegliDocumentoExcel(appPath);
+            datafile = doc.path;
+            lblDataFile.Content = datafile.Substring(datafile.LastIndexOf(@"\") + 1);
         }
         private void BtnEseguiClick(object sender, RoutedEventArgs e)
         {
-            ScegliDocumento doc = new scegliDirectory();
-            outputfolder = doc.scegliDocumento();
-
+            ScegliDirectory doc = new ScegliDirectory();
+            outputfolder = doc.path;
+            language = cboLingua.SelectedItem.ToString();
             datagenerazione = (DateTime)datePick.SelectedDate;
 
             KIIDService service = new KIIDService(template, datafile, outputfolder, language, datagenerazione);
@@ -60,7 +102,5 @@ namespace KIID_Frontend
                 service.generateOutput(kiiddata);
             }
         }
-
-       
     }
 }
