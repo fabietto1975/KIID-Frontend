@@ -15,3 +15,5 @@ C:\Users\surinif\Documents\visual studio 2015\Projects\KIID-Frontend\bin\Debug\K
 C:\Users\surinif\Documents\visual studio 2015\Projects\KIID-Frontend\bin\Debug\KIID-Frontend.application
 C:\Users\surinif\Documents\visual studio 2015\Projects\KIID-Frontend\obj\Debug\KIID-Frontend.exe.manifest
 C:\Users\surinif\Documents\visual studio 2015\Projects\KIID-Frontend\obj\Debug\KIID-Frontend.application
+C:\Users\surinif\Documents\Visual Studio 2015\Projects\KIID-Frontend\bin\Debug\iTextSharp.dll
+C:\Users\surinif\Documents\Visual Studio 2015\Projects\KIID-Frontend\obj\Debug\KIID-Frontend.csprojResolveAssemblyReference.cache
