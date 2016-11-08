@@ -4,9 +4,37 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:KIID_Frontend"
-        mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
+        mc:Ignorable="d"   
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
+        Title="Genera Kiids" Height="350" Width="254.672">
+    <Grid Margin="0,0,5.556,0.111">
+        <ComboBox x:Name="cboTipoFondi" HorizontalAlignment="Left" Margin="30,65,0,0" VerticalAlignment="Top" Width="56" SelectedIndex="0" >
+            <ComboBox.Effect>
+                <DropShadowEffect/>
+            </ComboBox.Effect>
+            <ListBoxItem Content="ITA" />
+            <ListBoxItem Content="ENG" />           
+        </ComboBox>
+
+        <DatePicker x:Name="datePick"  HorizontalAlignment="Left" Margin="30,33,0,0"  SelectedDate="{x:Static sys:DateTime.Now}" VerticalAlignment="Top" Height="22">
+            <DatePicker.Effect>
+                <DropShadowEffect/>
+            </DatePicker.Effect>
+        </DatePicker>
+        <Button Content="Scegli Template" HorizontalAlignment="Left" Height="35" Margin="30,98,0,0" VerticalAlignment="Top" Width="135" Click="BtnScegliWord">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <Button Content="Scegli File Dati" HorizontalAlignment="Left" Height="35" Margin="30,142,0,0" VerticalAlignment="Top" Width="135" Click="BtnScegliExcel">
+        <Button.Effect>
+            <DropShadowEffect/>
+        </Button.Effect>
+        </Button>
+        <Button Content="Esegui" HorizontalAlignment="Left" Height="35" Margin="30,259,0,0" VerticalAlignment="Top" Width="135" Click="BtnEseguiClick">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
     </Grid>
 </Window>
