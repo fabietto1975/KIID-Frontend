@@ -95,11 +95,12 @@ namespace KIID_Frontend
             language = cboLingua.SelectedItem.ToString();
             datagenerazione = (DateTime)datePick.SelectedDate;
 
+            
             KIIDService service = new KIIDService(template, datafile, outputfolder, language, datagenerazione);
             List<KIIDData> kiidDataList = service.readFundsData();
             foreach (KIIDData kiiddata in kiidDataList)
             {
-                service.generateOutput(kiiddata);
+                service.generateOutput(kiiddata);                
             }
         }
     }
