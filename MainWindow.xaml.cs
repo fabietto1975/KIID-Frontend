@@ -92,7 +92,7 @@ namespace KIID_Frontend
         {
             ScegliDirectory doc = new ScegliDirectory();
             outputfolder = doc.path;
-            language = cboLingua.SelectedItem.ToString();
+            language = cboLingua.SelectedValue.ToString();
             datagenerazione = (DateTime)datePick.SelectedDate;
 
             

@@ -13,7 +13,7 @@
     <Grid Margin="0,0,0,0" Background="AliceBlue">
 
         <ComboBox  x:Name="cboLingua" HorizontalAlignment="Left" Margin="261,104,0,0" VerticalAlignment="Top" Width="56" 
-                   SelectedIndex="0" ItemsSource="{Binding Source={StaticResource XmlData}, XPath=./Lingua}" DisplayMemberPath="@Name" >
+                   SelectedIndex="0" ItemsSource="{Binding Source={StaticResource XmlData}, XPath=./Lingua}" DisplayMemberPath="@Name" SelectedValuePath="@Value" >
             <ComboBox.Effect>
                 <DropShadowEffect/>
             </ComboBox.Effect>
