@@ -92,14 +92,15 @@ namespace KIID_Frontend
         {
             ScegliDirectory doc = new ScegliDirectory();
             outputfolder = doc.path;
-            language = cboLingua.SelectedItem.ToString();
+            language = cboLingua.SelectedValue.ToString();
             datagenerazione = (DateTime)datePick.SelectedDate;
 
+            
             KIIDService service = new KIIDService(template, datafile, outputfolder, language, datagenerazione);
             List<KIIDData> kiidDataList = service.readFundsData();
             foreach (KIIDData kiiddata in kiidDataList)
             {
-                service.generateOutput(kiiddata);
+                service.generateOutput(kiiddata);                
             }
         }
     }

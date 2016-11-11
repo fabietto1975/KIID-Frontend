@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Lingue>
+  <Lingua Name="ITA" Value="it-IT_IT" />
+  <Lingua Name="ENG" Value="en-EN_IE"/> 
+  <Lingua Name="CHI" Value="it-IT_CH" />
+  <Lingua Name="CHE" Value="en-EN_CH"/> 
+</Lingue>

@@ -47,26 +47,26 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ConsoleApplication.exe" size="17408">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ConsoleApplication.exe" size="19968">
       <assemblyIdentity name="ConsoleApplication" version="0.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>H/rv+LuA3sSKmuq4bdD326K9O15eHOubW66eaR78L8E=</dsig:DigestValue>
+        <dsig:DigestValue>qhYZL7eI4BCgYDPnrgTPvw9ZHtskehU0uoKZaUommQk=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="KIID-Frontend.exe" size="13760">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="KIID-Frontend.exe" size="16320">
       <assemblyIdentity name="KIID-Frontend" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>kNB2zBgj5f8CJM0fjSWqhfy98c0kjNUin3ABqFFFoVA=</dsig:DigestValue>
+        <dsig:DigestValue>qYDp14ZZTb5HAVOJzTSNPFJbpn6HempximvZ42wWTLQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
