@@ -146,9 +146,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\elencoLingue.txt" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="lingue.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
