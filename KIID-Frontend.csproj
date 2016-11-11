@@ -140,7 +140,7 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\valuelab\KIID.csproj">
+    <ProjectReference Include="..\KIID\KIID.csproj">
       <Project>{0e17eb0a-a938-4339-bc12-48af9d8b0b34}</Project>
       <Name>KIID</Name>
     </ProjectReference>
