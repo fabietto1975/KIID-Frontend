@@ -58,5 +58,7 @@
                 <Separator />
             </ToolBar>
         </ToolBarTray>
+        <ProgressBar x:Name="ProgressBar1" Value="{Binding progress, UpdateSourceTrigger=PropertyChanged}" Height="20" Minimum="0" Maximum="1" Margin="10,299,9.667,3"/>
+
     </Grid>
 </Window>

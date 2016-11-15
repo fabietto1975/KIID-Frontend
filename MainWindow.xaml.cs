@@ -31,7 +31,9 @@ namespace KIID_Frontend
         private string language;
         private DateTime datagenerazione;
 
+        private KIIDService service;
 
+   
         private string template
         {
             get
@@ -85,6 +87,8 @@ namespace KIID_Frontend
             {
                 errDatiFissi();
             }
+
+            
         }
 
         private void BtnScegliWord(object sender, RoutedEventArgs e)
@@ -113,14 +117,19 @@ namespace KIID_Frontend
                 datagenerazione = (DateTime)datePick.SelectedDate;
 
 
-                KIIDService service = new KIIDService(template, datafile, outputfolder, language, datagenerazione);
-                List<KIIDData> kiidDataList = service.readFundsData();
-                foreach (KIIDData kiiddata in kiidDataList)
+                service = new KIIDService(template, datafile, outputfolder, language, datagenerazione);
+                this.ProgressBar1.DataContext = service;
+                Task.Run(() =>
                 {
-                    service.generateOutput(kiiddata);
-                }
+                    List<KIIDData> kiidDataList = service.readFundsData();
+                    foreach (KIIDData kiiddata in kiidDataList)
+                    {
+                        service.generateOutput(kiiddata);
+                    }
+                    MessageBox.Show(string.Format("I file sono stati generati correttamente e salvati in {0}", outputfolder));
+
+                });
                 SaveDefaultPaths(); //memorizzo il percorso di salvataggio dei file
-                MessageBox.Show(string.Format("I file sono stati generati correttamente e salvati in {0}", outputfolder));
             }
             else
             {
