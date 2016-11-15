@@ -30,7 +30,7 @@ namespace KIID_Frontend.classi
             {
                 dlg.InitialDirectory = defaultPath;
             }
-            
+
 
             Nullable<bool> result = specifico(defaultPath, dlg);
 
@@ -103,7 +103,7 @@ namespace KIID_Frontend.classi
         public ScegliDocumentoWord(string defaultPath)
             : base(defaultPath)
         {
-         
+
         }
 
         internal override bool? specifico(string defaultPath, Microsoft.Win32.OpenFileDialog dlg)
@@ -142,16 +142,21 @@ namespace KIID_Frontend.classi
 
         public ScegliDirectory()
         {
-            path = scegliDirectory("");
+            path = sceltaDirectory("");
 
         }
-        public string scegliDirectory(string defaultPath)
+        public ScegliDirectory(string _defaultPath)
+        {
+            path = sceltaDirectory(_defaultPath);
+
+        }
+        private string sceltaDirectory(string defaultPath)
         {
             FolderBrowserDialog fbd = new FolderBrowserDialog();
-
+            fbd.SelectedPath = defaultPath;
             DialogResult result = fbd.ShowDialog();
 
-            if (!string.IsNullOrWhiteSpace(fbd.SelectedPath))
+            if (result != DialogResult.Cancel)
             {
                 return fbd.SelectedPath;
             }

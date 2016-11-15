@@ -93,6 +93,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="classi\FileDatiXml.cs" />
     <Compile Include="classi\ScegliDocumento.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -140,15 +141,19 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\KIID\KIID.csproj">
+    <ProjectReference Include="..\valuelab\KIID.csproj">
       <Project>{0e17eb0a-a938-4339-bc12-48af9d8b0b34}</Project>
       <Name>KIID</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="lingue.xml">
-      <SubType>Designer</SubType>
-    </Resource>
+    <Resource Include="lingue.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="datifissi.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

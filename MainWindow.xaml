@@ -12,23 +12,23 @@
     </Window.Resources>
     <Grid Margin="0,0,0,0" Background="AliceBlue">
 
-        <ComboBox  x:Name="cboLingua" HorizontalAlignment="Left" Margin="261,104,0,0" VerticalAlignment="Top" Width="56" 
+        <ComboBox  x:Name="cboLingua" HorizontalAlignment="Left" Margin="261,115,0,0" VerticalAlignment="Top" Width="56" 
                    SelectedIndex="0" ItemsSource="{Binding Source={StaticResource XmlData}, XPath=./Lingua}" DisplayMemberPath="@Name" SelectedValuePath="@Value" >
             <ComboBox.Effect>
                 <DropShadowEffect/>
             </ComboBox.Effect>
         </ComboBox>
-        <DatePicker x:Name="datePick"  HorizontalAlignment="Left" Margin="178,77,0,0"  SelectedDate="{x:Static sys:DateTime.Now}" VerticalAlignment="Top" Height="22">
+        <DatePicker x:Name="datePick"  HorizontalAlignment="Left" Margin="178,88,0,0"  SelectedDate="{x:Static sys:DateTime.Now}" VerticalAlignment="Top" Height="22">
             <DatePicker.Effect>
                 <DropShadowEffect/>
             </DatePicker.Effect>
         </DatePicker>
-        <Button Content="Scegli Template" HorizontalAlignment="Left" Height="35" Margin="21,154,0,0" VerticalAlignment="Top" Width="102" Click="BtnScegliWord">
+        <Button Content="Scegli Template" HorizontalAlignment="Left" Height="35" Margin="21,165,0,0" VerticalAlignment="Top" Width="102" Click="BtnScegliWord">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
         </Button>
-        <Button Content="Scegli File Dati" HorizontalAlignment="Left" Height="35" Margin="21,198,0,0" VerticalAlignment="Top" Width="102" Click="BtnScegliExcel">
+        <Button Content="Scegli File Dati" HorizontalAlignment="Left" Height="35" Margin="21,209,0,0" VerticalAlignment="Top" Width="102" Click="BtnScegliExcel">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
@@ -38,10 +38,25 @@
                 <DropShadowEffect/>
             </Button.Effect>
         </Button>
-        <Label x:Name="lblTitolo" Content="Generazione KIIDS"  HorizontalContentAlignment="Center" Height="45" Margin="0,10,-1,0" VerticalAlignment="Top" FontSize="24"/>
-        <Label Content="Data Kiids" HorizontalAlignment="Left" Margin="21,82,0,0" VerticalAlignment="Top"/>
-        <Label Content="Lingua Kiids" HorizontalAlignment="Left" Margin="21,108,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="lblTemplate" Content="-" HorizontalAlignment="Left" Margin="178,154,0,0" VerticalAlignment="Top" Width="140"/>
-        <Label x:Name="lblDataFile" Content="-" HorizontalAlignment="Left" Margin="178,202,0,0" VerticalAlignment="Top" Width="140"/>
+        <Label x:Name="lblTitolo" Content="Generazione KIIDS"  HorizontalContentAlignment="Center" Height="45" Margin="0,31,-1,0" VerticalAlignment="Top" FontSize="24"/>
+        <Label Content="Data Kiids" HorizontalAlignment="Left" Margin="21,93,0,0" VerticalAlignment="Top"/>
+        <Label Content="Lingua Kiids" HorizontalAlignment="Left" Margin="21,119,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblTemplate" Content="-" HorizontalAlignment="Left" Margin="178,165,0,0" VerticalAlignment="Top" Width="140"/>
+        <Label x:Name="lblDataFile" Content="-" HorizontalAlignment="Left" Margin="178,213,0,0" VerticalAlignment="Top" Width="140"/>
+        <ToolBarTray Background="DarkGray" Height="30" IsLocked="True" VerticalAlignment="Top">
+            <ToolBar Name="MyToolbar" Width="350" Height="30"  >
+                <Separator />
+                <Button Content="Dati fissi" Name="OpenButton" Click="ButtonDatiFissi_Click">
+
+                </Button>
+                <Separator />
+                <Button Content="Esci" Name="QuitButton" Click="ButtonEsci_Click">
+
+                </Button>
+                <Separator />
+                <Button Content="?" Name="HelButton" Click="ButtonHelp_Click" Margin="0,2,0,1" VerticalAlignment="Stretch"/>
+                <Separator />
+            </ToolBar>
+        </ToolBarTray>
     </Grid>
 </Window>
