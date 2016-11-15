@@ -24,6 +24,7 @@ namespace KIID_Frontend
     /// </summary>
     public partial class MainWindow : Window
     {
+        private string templatePath;
         private string _template;
         private string _datafile;
         private string outputfolder;
@@ -72,36 +73,109 @@ namespace KIID_Frontend
         public MainWindow()
         {
             InitializeComponent();
+            FiledatiXML datiFissi = new FiledatiXML("datifissi.xml");
+            if (datiFissi.fileTrovato)
+            {
+                datiFissi.valoreCercato = "OutputFolder";
+                outputfolder = datiFissi.result;
+                datiFissi.valoreCercato = "PathTemplate";
+                templatePath = datiFissi.result;
+            }
+            else
+            {
+                errDatiFissi();
+            }
         }
 
         private void BtnScegliWord(object sender, RoutedEventArgs e)
         {
-            string appPath = AppDomain.CurrentDomain.BaseDirectory.ToString() + "TEMPLATE";
-            ScegliDocumento doc = new ScegliDocumentoWord(appPath);
+           // string appPath = AppDomain.CurrentDomain.BaseDirectory.ToString() + "TEMPLATE";
+            ScegliDocumento doc = new ScegliDocumentoWord(templatePath);
             template = doc.path;
             lblTemplate.Content = template.Substring(template.LastIndexOf(@"\") + 1);
+
         }
         private void BtnScegliExcel(object sender, RoutedEventArgs e)
         {
-            string appPath = AppDomain.CurrentDomain.BaseDirectory.ToString() + "INPUT";
-            ScegliDocumento doc = new ScegliDocumentoExcel(appPath);
+           // string appPath = AppDomain.CurrentDomain.BaseDirectory.ToString() + "INPUT";
+            ScegliDocumento doc = new ScegliDocumentoExcel(templatePath);
             datafile = doc.path;
             lblDataFile.Content = datafile.Substring(datafile.LastIndexOf(@"\") + 1);
         }
         private void BtnEseguiClick(object sender, RoutedEventArgs e)
         {
-            ScegliDirectory doc = new ScegliDirectory();
-            outputfolder = doc.path;
-            language = cboLingua.SelectedValue.ToString();
-            datagenerazione = (DateTime)datePick.SelectedDate;
+            ScegliDirectory doc = new ScegliDirectory(outputfolder);
 
-            
-            KIIDService service = new KIIDService(template, datafile, outputfolder, language, datagenerazione);
-            List<KIIDData> kiidDataList = service.readFundsData();
-            foreach (KIIDData kiiddata in kiidDataList)
+            if (!string.IsNullOrEmpty(doc.path))
             {
-                service.generateOutput(kiiddata);                
+                outputfolder = doc.path;
+                language = cboLingua.SelectedValue.ToString();
+                datagenerazione = (DateTime)datePick.SelectedDate;
+
+
+                KIIDService service = new KIIDService(template, datafile, outputfolder, language, datagenerazione);
+                List<KIIDData> kiidDataList = service.readFundsData();
+                foreach (KIIDData kiiddata in kiidDataList)
+                {
+                    service.generateOutput(kiiddata);
+                }
+                SaveDefaultPaths(); //memorizzo il percorso di salvataggio dei file
+                MessageBox.Show(string.Format("I file sono stati generati correttamente e salvati in {0}", outputfolder));
+            }
+            else
+            {
+                MessageBox.Show("Operazione annullata");
             }
         }
+
+        private void SaveDefaultPaths()
+        {
+            FiledatiXML datiFissi = new FiledatiXML("datifissi.xml");
+            if (datiFissi.fileTrovato)
+            {
+                datiFissi.SetValore("OutputFolder", outputfolder);
+                templatePath = template.Substring(0, template.LastIndexOf("\\"));
+                datiFissi.SetValore("PathTemplate",templatePath);
+                datiFissi.SaveFile();
+            }
+          
+        }
+
+        private void ButtonDatiFissi_Click(object sender, RoutedEventArgs e)
+        {
+            FiledatiXML datiFissi = new FiledatiXML("datifissi.xml");
+            if (datiFissi.fileTrovato)
+            {
+                Dictionary<string, string> elenco = datiFissi.GetElencoValori();
+                StringBuilder sb = new StringBuilder();
+                foreach (var item in elenco)
+                {
+                    sb.Append(item.Key);
+                    sb.Append(" = ");
+                    sb.Append(item.Value);
+                    sb.Append(Environment.NewLine);
+                }
+                MessageBox.Show(sb.ToString(), "Dati Fissi");
+            }
+            else
+            {
+                errDatiFissi();
+            }
+        }
+
+        private void errDatiFissi()
+        {
+            MessageBox.Show(string.Format("Non trovo il file 'datifissi.xml' nella directory '{0}'", AppDomain.CurrentDomain.BaseDirectory.ToString()));
+        }
+
+        private void ButtonEsci_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+        private void ButtonHelp_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
     }
 }
