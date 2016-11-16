@@ -31,6 +31,8 @@ namespace KIID_Frontend
         private string language;
         private DateTime datagenerazione;
 
+        private KIIDService service;
+
 
         private string template
         {
@@ -85,11 +87,13 @@ namespace KIID_Frontend
             {
                 errDatiFissi();
             }
+            ProgressBar1.Visibility = Visibility.Hidden;
+
         }
 
         private void BtnScegliWord(object sender, RoutedEventArgs e)
         {
-           // string appPath = AppDomain.CurrentDomain.BaseDirectory.ToString() + "TEMPLATE";
+            // string appPath = AppDomain.CurrentDomain.BaseDirectory.ToString() + "TEMPLATE";
             ScegliDocumento doc = new ScegliDocumentoWord(templatePath);
             template = doc.path;
             lblTemplate.Content = template.Substring(template.LastIndexOf(@"\") + 1);
@@ -97,12 +101,12 @@ namespace KIID_Frontend
         }
         private void BtnScegliExcel(object sender, RoutedEventArgs e)
         {
-           // string appPath = AppDomain.CurrentDomain.BaseDirectory.ToString() + "INPUT";
+            // string appPath = AppDomain.CurrentDomain.BaseDirectory.ToString() + "INPUT";
             ScegliDocumento doc = new ScegliDocumentoExcel(templatePath);
             datafile = doc.path;
             lblDataFile.Content = datafile.Substring(datafile.LastIndexOf(@"\") + 1);
         }
-        private void BtnEseguiClick(object sender, RoutedEventArgs e)
+        private async void BtnEseguiClick(object sender, RoutedEventArgs e)
         {
             ScegliDirectory doc = new ScegliDirectory(outputfolder);
 
@@ -112,21 +116,38 @@ namespace KIID_Frontend
                 language = cboLingua.SelectedValue.ToString();
                 datagenerazione = (DateTime)datePick.SelectedDate;
 
+                service = new KIIDService(template, datafile, outputfolder, language, datagenerazione);
+                ProgressBar1.DataContext = service;
+                ProgressBar1.Visibility = Visibility.Visible;
+                ProgressBar1.Value = 0.05;
 
-                KIIDService service = new KIIDService(template, datafile, outputfolder, language, datagenerazione);
-                List<KIIDData> kiidDataList = service.readFundsData();
-                foreach (KIIDData kiiddata in kiidDataList)
-                {
-                    service.generateOutput(kiiddata);
-                }
-                SaveDefaultPaths(); //memorizzo il percorso di salvataggio dei file
+                await EseguiService();
+
+
+                ProgressBar1.Visibility = Visibility.Hidden;
                 MessageBox.Show(string.Format("I file sono stati generati correttamente e salvati in {0}", outputfolder));
+
+                SaveDefaultPaths(); //memorizzo il percorso di salvataggio dei file
             }
             else
             {
                 MessageBox.Show("Operazione annullata");
             }
         }
+        private async Task EseguiService()
+        {
+            await Task.Run(() =>
+               {
+                   List<KIIDData> kiidDataList = service.readFundsData();
+                   foreach (KIIDData kiiddata in kiidDataList)
+                   {
+                       service.generateOutput(kiiddata);
+                   }
+
+               });
+        }
+
+
 
         private void SaveDefaultPaths()
         {
@@ -135,10 +156,10 @@ namespace KIID_Frontend
             {
                 datiFissi.SetValore("OutputFolder", outputfolder);
                 templatePath = template.Substring(0, template.LastIndexOf("\\"));
-                datiFissi.SetValore("PathTemplate",templatePath);
+                datiFissi.SetValore("PathTemplate", templatePath);
                 datiFissi.SaveFile();
             }
-          
+
         }
 
         private void ButtonDatiFissi_Click(object sender, RoutedEventArgs e)

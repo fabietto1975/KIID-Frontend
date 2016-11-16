@@ -58,5 +58,11 @@
                 <Separator />
             </ToolBar>
         </ToolBarTray>
+        <ProgressBar x:Name="ProgressBar1" Value="{Binding progress, UpdateSourceTrigger=PropertyChanged}" Minimum="0" Maximum="1.05"   Margin="21,299,26,6.333">
+            <ProgressBar.Effect>
+                <DropShadowEffect/>
+            </ProgressBar.Effect>
+        </ProgressBar>
+
     </Grid>
 </Window>

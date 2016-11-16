@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DatiFissi>
+  <OutputFolder Name="Cartella di salvataggio" Value="C:\ampartecipazioni"></OutputFolder>
+  <PathTemplate Name="Cartella dei template" Value="C:\Users\giovanni\Documents"></PathTemplate>
+</DatiFissi>
