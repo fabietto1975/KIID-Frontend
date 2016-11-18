@@ -6,12 +6,11 @@
         xmlns:local="clr-namespace:KIID_Frontend"
         mc:Ignorable="d"   
         xmlns:sys="clr-namespace:System;assembly=mscorlib"
-        Title="Genera Kiids" Height="350" Width="350" ResizeMode="NoResize">
+        Title="Genera Kiids" Height="450" Width="350" ResizeMode="NoResize">
     <Window.Resources>
         <XmlDataProvider x:Key="XmlData" Source="lingue.xml" XPath="Lingue"/>
     </Window.Resources>
     <Grid Margin="0,0,0,0" Background="AliceBlue">
-
         <ComboBox  x:Name="cboLingua" HorizontalAlignment="Left" Margin="261,115,0,0" VerticalAlignment="Top" Width="56" 
                    SelectedIndex="0" ItemsSource="{Binding Source={StaticResource XmlData}, XPath=./Lingua}" DisplayMemberPath="@Name" SelectedValuePath="@Value" >
             <ComboBox.Effect>
@@ -42,7 +41,7 @@
         <Label Content="Data Kiids" HorizontalAlignment="Left" Margin="21,93,0,0" VerticalAlignment="Top"/>
         <Label Content="Lingua Kiids" HorizontalAlignment="Left" Margin="21,119,0,0" VerticalAlignment="Top"/>
         <Label x:Name="lblTemplate" Content="-" HorizontalAlignment="Left" Margin="178,165,0,0" VerticalAlignment="Top" Width="140"/>
-        <Label x:Name="lblDataFile" Content="-" HorizontalAlignment="Left" Margin="178,213,0,0" VerticalAlignment="Top" Width="140"/>
+        <Label x:Name="lblDataFile" HorizontalAlignment="Left" Margin="178,213,0,0" VerticalAlignment="Top" Width="140"/>
         <ToolBarTray Background="DarkGray" Height="30" IsLocked="True" VerticalAlignment="Top">
             <ToolBar Name="MyToolbar" Width="350" Height="30"  >
                 <Separator />
@@ -51,18 +50,18 @@
                 </Button>
                 <Separator />
                 <Button Content="Esci" Name="QuitButton" Click="ButtonEsci_Click">
-
                 </Button>
                 <Separator />
                 <Button Content="?" Name="HelButton" Click="ButtonHelp_Click" Margin="0,2,0,1" VerticalAlignment="Stretch"/>
                 <Separator />
             </ToolBar>
         </ToolBarTray>
-        <ProgressBar x:Name="ProgressBar1" Value="{Binding progress, UpdateSourceTrigger=PropertyChanged}" Minimum="0" Maximum="1.05"   Margin="21,299,26,6.333">
+        <ProgressBar x:Name="ProgressBar1" Value="{Binding progress, UpdateSourceTrigger=PropertyChanged}" Minimum="0" Maximum="1.05"   Margin="21,299,25.667,103">
             <ProgressBar.Effect>
                 <DropShadowEffect/>
             </ProgressBar.Effect>
         </ProgressBar>
-
+        
+        <Label x:Name="ErrorMessage" Content="{Binding error, UpdateSourceTrigger=PropertyChanged }" HorizontalAlignment="Center" Margin="21,363,0,0" VerticalAlignment="Top"/>
     </Grid>
 </Window>

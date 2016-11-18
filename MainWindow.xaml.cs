@@ -117,14 +117,16 @@ namespace KIID_Frontend
                 datagenerazione = (DateTime)datePick.SelectedDate;
 
                 service = new KIIDService(template, datafile, outputfolder, language, datagenerazione);
+                ErrorMessage.DataContext = service;
                 ProgressBar1.DataContext = service;
                 ProgressBar1.Visibility = Visibility.Visible;
                 ProgressBar1.Value = 0.05;
-
+                
                 await EseguiService();
 
-
+                
                 ProgressBar1.Visibility = Visibility.Hidden;
+                ErrorMessage.Visibility = Visibility.Visible;
                 MessageBox.Show(string.Format("I file sono stati generati correttamente e salvati in {0}", outputfolder));
 
                 SaveDefaultPaths(); //memorizzo il percorso di salvataggio dei file
@@ -138,12 +140,7 @@ namespace KIID_Frontend
         {
             await Task.Run(() =>
                {
-                   List<KIIDData> kiidDataList = service.readFundsData();
-                   foreach (KIIDData kiiddata in kiidDataList)
-                   {
-                       service.generateOutput(kiiddata);
-                   }
-
+                   service.GenerateKIID();
                });
         }
 

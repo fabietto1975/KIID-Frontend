@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <DatiFissi>
-  <OutputFolder Name="Cartella di salvataggio" Value="C:\Users\giovanni.HEDGEINV\Documents"></OutputFolder>
-  <PathTemplate Name="Cartella dei template" Value="C:\Lavori\kiid\KKID\TEMPLATE"></PathTemplate>
+  <OutputFolder Name="Cartella di salvataggio" Value="D:\TEMP"></OutputFolder>
+  <PathTemplate Name="Cartella dei template" Value="D:\LAVORO\PROGETTI\HEDGEINVEST\KIID\TEMPLATE"></PathTemplate>
 </DatiFissi>
