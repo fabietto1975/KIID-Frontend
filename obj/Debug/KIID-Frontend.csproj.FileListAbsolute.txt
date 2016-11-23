@@ -25,22 +25,25 @@ C:\lavori\KIID-Frontend\bin\Debug\Common.Logging.pdb
 C:\lavori\KIID-Frontend\bin\Debug\Common.Logging.xml
 C:\lavori\KIID-Frontend\obj\Debug\KIID-Frontend.csprojResolveAssemblyReference.cache
 C:\Users\surinif\Documents\Visual Studio 2015\Projects\KIID-Frontend\bin\Debug\KIID-Frontend.exe.config
-C:\Users\surinif\Documents\Visual Studio 2015\Projects\KIID-Frontend\obj\Debug\KIID-Frontend.exe
-C:\Users\surinif\Documents\Visual Studio 2015\Projects\KIID-Frontend\obj\Debug\KIID-Frontend.pdb
 C:\Users\surinif\Documents\Visual Studio 2015\Projects\KIID-Frontend\bin\Debug\KIID-Frontend.exe.manifest
 C:\Users\surinif\Documents\Visual Studio 2015\Projects\KIID-Frontend\bin\Debug\KIID-Frontend.application
 C:\Users\surinif\Documents\Visual Studio 2015\Projects\KIID-Frontend\bin\Debug\KIID-Frontend.exe
 C:\Users\surinif\Documents\Visual Studio 2015\Projects\KIID-Frontend\bin\Debug\KIID-Frontend.pdb
-C:\Users\surinif\Documents\Visual Studio 2015\Projects\KIID-Frontend\bin\Debug\ConsoleApplication.exe
-C:\Users\surinif\Documents\Visual Studio 2015\Projects\KIID-Frontend\bin\Debug\DocumentFormat.OpenXml.dll
 C:\Users\surinif\Documents\Visual Studio 2015\Projects\KIID-Frontend\bin\Debug\Common.Logging.Core.dll
 C:\Users\surinif\Documents\Visual Studio 2015\Projects\KIID-Frontend\bin\Debug\Common.Logging.dll
-C:\Users\surinif\Documents\Visual Studio 2015\Projects\KIID-Frontend\bin\Debug\ConsoleApplication.pdb
-C:\Users\surinif\Documents\Visual Studio 2015\Projects\KIID-Frontend\bin\Debug\DocumentFormat.OpenXml.xml
-C:\Users\surinif\Documents\Visual Studio 2015\Projects\KIID-Frontend\bin\Debug\Common.Logging.Core.pdb
-C:\Users\surinif\Documents\Visual Studio 2015\Projects\KIID-Frontend\bin\Debug\Common.Logging.Core.xml
+C:\Users\surinif\Documents\Visual Studio 2015\Projects\KIID-Frontend\bin\Debug\Common.Logging.Log4Net1213.dll
+C:\Users\surinif\Documents\Visual Studio 2015\Projects\KIID-Frontend\bin\Debug\KIIDService.dll
+C:\Users\surinif\Documents\Visual Studio 2015\Projects\KIID-Frontend\bin\Debug\log4net.dll
+C:\Users\surinif\Documents\Visual Studio 2015\Projects\KIID-Frontend\bin\Debug\DocumentFormat.OpenXml.dll
+C:\Users\surinif\Documents\Visual Studio 2015\Projects\KIID-Frontend\bin\Debug\KIIDService.pdb
 C:\Users\surinif\Documents\Visual Studio 2015\Projects\KIID-Frontend\bin\Debug\Common.Logging.pdb
 C:\Users\surinif\Documents\Visual Studio 2015\Projects\KIID-Frontend\bin\Debug\Common.Logging.xml
+C:\Users\surinif\Documents\Visual Studio 2015\Projects\KIID-Frontend\bin\Debug\Common.Logging.Core.pdb
+C:\Users\surinif\Documents\Visual Studio 2015\Projects\KIID-Frontend\bin\Debug\Common.Logging.Core.xml
+C:\Users\surinif\Documents\Visual Studio 2015\Projects\KIID-Frontend\bin\Debug\Common.Logging.Log4Net1213.pdb
+C:\Users\surinif\Documents\Visual Studio 2015\Projects\KIID-Frontend\bin\Debug\Common.Logging.Log4Net1213.xml
+C:\Users\surinif\Documents\Visual Studio 2015\Projects\KIID-Frontend\bin\Debug\log4net.xml
+C:\Users\surinif\Documents\Visual Studio 2015\Projects\KIID-Frontend\bin\Debug\DocumentFormat.OpenXml.xml
 C:\Users\surinif\Documents\Visual Studio 2015\Projects\KIID-Frontend\obj\Debug\KIID-Frontend.csprojResolveAssemblyReference.cache
 C:\Users\surinif\Documents\Visual Studio 2015\Projects\KIID-Frontend\obj\Debug\MainWindow.g.cs
 C:\Users\surinif\Documents\Visual Studio 2015\Projects\KIID-Frontend\obj\Debug\App.g.cs
@@ -52,3 +55,5 @@ C:\Users\surinif\Documents\Visual Studio 2015\Projects\KIID-Frontend\obj\Debug\K
 C:\Users\surinif\Documents\Visual Studio 2015\Projects\KIID-Frontend\obj\Debug\KIID-Frontend.csproj.GenerateResource.Cache
 C:\Users\surinif\Documents\Visual Studio 2015\Projects\KIID-Frontend\obj\Debug\KIID-Frontend.exe.manifest
 C:\Users\surinif\Documents\Visual Studio 2015\Projects\KIID-Frontend\obj\Debug\KIID-Frontend.application
+C:\Users\surinif\Documents\Visual Studio 2015\Projects\KIID-Frontend\obj\Debug\KIID-Frontend.exe
+C:\Users\surinif\Documents\Visual Studio 2015\Projects\KIID-Frontend\obj\Debug\KIID-Frontend.pdb

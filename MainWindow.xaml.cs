@@ -88,12 +88,15 @@ namespace KIID_Frontend
                 errDatiFissi();
             }
             ProgressBar1.Visibility = Visibility.Hidden;
-
+            lblError.Visibility = Visibility.Hidden;
+            txtError.DataContext = service;
+            lblError.DataContext = service;
         }
 
         private void BtnScegliWord(object sender, RoutedEventArgs e)
         {
             // string appPath = AppDomain.CurrentDomain.BaseDirectory.ToString() + "TEMPLATE";
+            lblError.Visibility = Visibility.Hidden;
             ScegliDocumento doc = new ScegliDocumentoWord(templatePath);
             template = doc.path;
             lblTemplate.Content = template.Substring(template.LastIndexOf(@"\") + 1);
@@ -102,12 +105,14 @@ namespace KIID_Frontend
         private void BtnScegliExcel(object sender, RoutedEventArgs e)
         {
             // string appPath = AppDomain.CurrentDomain.BaseDirectory.ToString() + "INPUT";
+            lblError.Visibility = Visibility.Hidden;
             ScegliDocumento doc = new ScegliDocumentoExcel(templatePath);
             datafile = doc.path;
             lblDataFile.Content = datafile.Substring(datafile.LastIndexOf(@"\") + 1);
         }
         private async void BtnEseguiClick(object sender, RoutedEventArgs e)
         {
+
             ScegliDirectory doc = new ScegliDirectory(outputfolder);
 
             if (!string.IsNullOrEmpty(doc.path))
@@ -117,19 +122,24 @@ namespace KIID_Frontend
                 datagenerazione = (DateTime)datePick.SelectedDate;
 
                 service = new KIIDService(template, datafile, outputfolder, language, datagenerazione);
-                ErrorMessage.DataContext = service;
+                txtError.DataContext = service;
                 ProgressBar1.DataContext = service;
                 ProgressBar1.Visibility = Visibility.Visible;
                 ProgressBar1.Value = 0.05;
-                
+                service.error = ""; //<-- è necessario settare una variabile per attivare il binding del DataConext
                 await EseguiService();
-
-                
                 ProgressBar1.Visibility = Visibility.Hidden;
-                ErrorMessage.Visibility = Visibility.Visible;
-                MessageBox.Show(string.Format("I file sono stati generati correttamente e salvati in {0}", outputfolder));
+                if (string.IsNullOrEmpty(service.error))
+                {
+                    MessageBox.Show(string.Format("I file sono stati generati correttamente e salvati in {0}", outputfolder));
+                    SaveDefaultPaths(); //memorizzo il percorso di salvataggio dei file  
+                }
+                else
+                {
+                    lblError.Visibility = Visibility.Visible;
+                }
 
-                SaveDefaultPaths(); //memorizzo il percorso di salvataggio dei file
+
             }
             else
             {
@@ -161,11 +171,18 @@ namespace KIID_Frontend
 
         private void ButtonDatiFissi_Click(object sender, RoutedEventArgs e)
         {
-            FiledatiXML datiFissi = new FiledatiXML("datifissi.xml");
-            if (datiFissi.fileTrovato)
+            StringBuilder sb = new StringBuilder();
+            FiledatiXML fileXml = new FiledatiXML("datifissi.xml");
+            LeggeDatiDafileXml(sb, fileXml);
+            MessageBox.Show(sb.ToString(), "Dati Fissi");
+        }
+
+        private void LeggeDatiDafileXml(StringBuilder sb, FiledatiXML fileXml)
+        {
+            if (fileXml.fileTrovato)
             {
-                Dictionary<string, string> elenco = datiFissi.GetElencoValori();
-                StringBuilder sb = new StringBuilder();
+                Dictionary<string, string> elenco = fileXml.GetElencoValori();
+
                 foreach (var item in elenco)
                 {
                     sb.Append(item.Key);
@@ -173,7 +190,7 @@ namespace KIID_Frontend
                     sb.Append(item.Value);
                     sb.Append(Environment.NewLine);
                 }
-                MessageBox.Show(sb.ToString(), "Dati Fissi");
+
             }
             else
             {
@@ -192,7 +209,16 @@ namespace KIID_Frontend
         }
         private void ButtonHelp_Click(object sender, RoutedEventArgs e)
         {
+            StringBuilder sb = new StringBuilder();
+            foreach (System.Xml.XmlElement item in cboLingua.Items)
+            {
+                sb.Append(item.Attributes["Name"].Value.ToString());
+                sb.Append(" - ");
+                sb.Append(item.Attributes["Value"].Value.ToString());
+                sb.Append(Environment.NewLine);
 
+            }
+            MessageBox.Show(sb.ToString());
         }
 
     }

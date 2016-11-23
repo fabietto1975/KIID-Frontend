@@ -7,14 +7,14 @@
     <framework targetVersion="4.5" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="KIID-Frontend.exe.manifest" size="6213">
+    <dependentAssembly dependencyType="install" codebase="KIID-Frontend.exe.manifest" size="8044">
       <assemblyIdentity name="KIID-Frontend.exe" version="1.0.0.1" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>SP8bjuZXbjoImlwpHewgMwMziUnC4Z96odap/c4qCDs=</dsig:DigestValue>
+        <dsig:DigestValue>1DCiDFE5TowHgE1Nc0iXQC+Db45DE9nn+o+0E5ET/84=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
