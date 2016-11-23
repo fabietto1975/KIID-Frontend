@@ -6,9 +6,9 @@
         xmlns:local="clr-namespace:KIID_Frontend"
         mc:Ignorable="d"   
         xmlns:sys="clr-namespace:System;assembly=mscorlib"
-        Title="Genera Kiids" Height="350" Width="350" ResizeMode="NoResize" Icon="print_queue.ico">
+        Title="Genera Kiids" Height="350" Width="350" ResizeMode="NoResize" Icon="kiid.ico">
     <Window.Resources>
-        <XmlDataProvider x:Key="XmlData" Source="lingue.xml" XPath="Lingue"/>
+        <XmlDataProvider x:Key="XmlData" Source="lingue.xml" XPath="Lingue"/>        
     </Window.Resources>
     <Grid Margin="0,0,0,0" Background="AliceBlue">
         <Grid.ColumnDefinitions>
@@ -67,6 +67,13 @@
                 <DropShadowEffect/>
             </ProgressBar.Effect>
         </ProgressBar>
-
+        <Label  x:Name="lblError" Background="Aquamarine" Foreground="Red"  HorizontalAlignment="Left" Margin="21,253,0,0" VerticalAlignment="Top" Width="313" Grid.ColumnSpan="2" Height="56">
+            <TextBlock x:Name="txtError" TextWrapping="WrapWithOverflow" Text="{Binding error, UpdateSourceTrigger=PropertyChanged}" >
+                
+            </TextBlock>
+            <Label.Effect>
+                <DropShadowEffect/>
+            </Label.Effect>
+        </Label>
     </Grid>
 </Window>

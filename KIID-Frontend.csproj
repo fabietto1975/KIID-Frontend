@@ -63,6 +63,9 @@
   <PropertyGroup>
     <SignManifests>true</SignManifests>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>kiid.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -158,7 +161,7 @@
     <Resource Include="datifissi.xml" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="print_queue.ico" />
+    <Resource Include="kiid.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
