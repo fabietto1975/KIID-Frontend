@@ -1,0 +1,156 @@
+INFO 9 it.valuelab.hedgeinvest.KIID.service.KIIDService - Inizio generazione documenti 
+INFO 9 it.valuelab.hedgeinvest.KIID.service.KIIDService - Inizio lettura dati input
+INFO 9 it.valuelab.hedgeinvest.KIID.service.KIIDService - Inizio lettura dati input - Performance
+INFO 9 it.valuelab.hedgeinvest.KIID.service.KIIDService - Termine lettura dati input - Performance
+INFO 9 it.valuelab.hedgeinvest.KIID.service.KIIDService - Inizio lettura dati input - Dati fondi
+INFO 9 it.valuelab.hedgeinvest.KIID.service.KIIDService - Dati fondi: suffisso 
+DEBUG 9 it.valuelab.hedgeinvest.KIID.service.KIIDService - testo1Col  E
+DEBUG 9 it.valuelab.hedgeinvest.KIID.service.KIIDService - testo2Col  F
+DEBUG 9 it.valuelab.hedgeinvest.KIID.service.KIIDService - testo3Col  G
+DEBUG 9 it.valuelab.hedgeinvest.KIID.service.KIIDService - commissioniRendimentoCol  L
+DEBUG 9 it.valuelab.hedgeinvest.KIID.service.KIIDService - informazionipraticheCol  M
+INFO 9 it.valuelab.hedgeinvest.KIID.service.KIIDService - Termine lettura dati input - Dati fondi
+INFO 9 it.valuelab.hedgeinvest.KIID.service.KIIDService - Inizio generazione documento 1 di 9 D:\TEMP\KIID_HICU_IT_EUR DM Shares_IT_IT_23 11 2016.docx
+DEBUG 9 it.valuelab.hedgeinvest.helpers.WordHelper - REMOVED ROW
+INFO 9 it.valuelab.hedgeinvest.KIID.service.KIIDService - Generazione documento 1 di 9 D:\TEMP\KIID_HICU_IT_EUR DM Shares_IT_IT_23 11 2016.docx terminata
+INFO 9 it.valuelab.hedgeinvest.KIID.service.KIIDService - Inizio generazione documento 2 di 9 D:\TEMP\KIID_HICU_IT_EUR R Shares_IT_IT_23 11 2016.docx
+DEBUG 9 it.valuelab.hedgeinvest.helpers.WordHelper - REMOVED ROW
+INFO 9 it.valuelab.hedgeinvest.KIID.service.KIIDService - Generazione documento 2 di 9 D:\TEMP\KIID_HICU_IT_EUR R Shares_IT_IT_23 11 2016.docx terminata
+INFO 9 it.valuelab.hedgeinvest.KIID.service.KIIDService - Inizio generazione documento 3 di 9 D:\TEMP\KIID_HICU_IT_USD R Shares_IT_IT_23 11 2016.docx
+DEBUG 9 it.valuelab.hedgeinvest.helpers.WordHelper - REMOVED ROW
+INFO 9 it.valuelab.hedgeinvest.KIID.service.KIIDService - Generazione documento 3 di 9 D:\TEMP\KIID_HICU_IT_USD R Shares_IT_IT_23 11 2016.docx terminata
+INFO 9 it.valuelab.hedgeinvest.KIID.service.KIIDService - Inizio generazione documento 4 di 9 D:\TEMP\KIID_HICU_IT_USD DM Shares_IT_IT_23 11 2016.docx
+DEBUG 9 it.valuelab.hedgeinvest.helpers.WordHelper - REMOVED ROW
+INFO 9 it.valuelab.hedgeinvest.KIID.service.KIIDService - Generazione documento 4 di 9 D:\TEMP\KIID_HICU_IT_USD DM Shares_IT_IT_23 11 2016.docx terminata
+INFO 9 it.valuelab.hedgeinvest.KIID.service.KIIDService - Inizio generazione documento 5 di 9 D:\TEMP\KIID_HICU_IT_CHF DM Shares_IT_IT_23 11 2016.docx
+DEBUG 9 it.valuelab.hedgeinvest.helpers.WordHelper - REMOVED ROW
+INFO 9 it.valuelab.hedgeinvest.KIID.service.KIIDService - Generazione documento 5 di 9 D:\TEMP\KIID_HICU_IT_CHF DM Shares_IT_IT_23 11 2016.docx terminata
+INFO 9 it.valuelab.hedgeinvest.KIID.service.KIIDService - Inizio generazione documento 6 di 9 D:\TEMP\KIID_HICU_IT_CHF R Shares_IT_IT_23 11 2016.docx
+DEBUG 9 it.valuelab.hedgeinvest.helpers.WordHelper - REMOVED ROW
+INFO 9 it.valuelab.hedgeinvest.KIID.service.KIIDService - Generazione documento 6 di 9 D:\TEMP\KIID_HICU_IT_CHF R Shares_IT_IT_23 11 2016.docx terminata
+INFO 9 it.valuelab.hedgeinvest.KIID.service.KIIDService - Inizio generazione documento 7 di 9 D:\TEMP\KIID_HICU_IT_EUR I Shares_IT_IT_23 11 2016.docx
+DEBUG 9 it.valuelab.hedgeinvest.helpers.WordHelper - REMOVED ROW
+INFO 9 it.valuelab.hedgeinvest.KIID.service.KIIDService - Generazione documento 7 di 9 D:\TEMP\KIID_HICU_IT_EUR I Shares_IT_IT_23 11 2016.docx terminata
+INFO 9 it.valuelab.hedgeinvest.KIID.service.KIIDService - Inizio generazione documento 8 di 9 D:\TEMP\KIID_HICU_IT_USD I Shares_IT_IT_23 11 2016.docx
+DEBUG 9 it.valuelab.hedgeinvest.helpers.WordHelper - REMOVED ROW
+INFO 9 it.valuelab.hedgeinvest.KIID.service.KIIDService - Generazione documento 8 di 9 D:\TEMP\KIID_HICU_IT_USD I Shares_IT_IT_23 11 2016.docx terminata
+INFO 9 it.valuelab.hedgeinvest.KIID.service.KIIDService - Inizio generazione documento 9 di 9 D:\TEMP\KIID_HICU_IT_CHF I Shares_IT_IT_23 11 2016.docx
+DEBUG 9 it.valuelab.hedgeinvest.helpers.WordHelper - REMOVED ROW
+INFO 9 it.valuelab.hedgeinvest.KIID.service.KIIDService - Generazione documento 9 di 9 D:\TEMP\KIID_HICU_IT_CHF I Shares_IT_IT_23 11 2016.docx terminata
+66   it.valuelab.hedgeinvest.KIID.service.KIIDService (null) - Inizio generazione documenti 
+85   it.valuelab.hedgeinvest.KIID.service.KIIDService (null) - Inizio lettura dati input
+159  it.valuelab.hedgeinvest.KIID.service.KIIDService (null) - Inizio lettura dati input - Performance
+187  it.valuelab.hedgeinvest.KIID.service.KIIDService (null) - Termine lettura dati input - Performance
+187  it.valuelab.hedgeinvest.KIID.service.KIIDService (null) - Inizio lettura dati input - Dati fondi
+187  it.valuelab.hedgeinvest.KIID.service.KIIDService (null) - Dati fondi: suffisso 
+196  it.valuelab.hedgeinvest.KIID.service.KIIDService (null) - testo1Col  E
+197  it.valuelab.hedgeinvest.KIID.service.KIIDService (null) - testo2Col  F
+197  it.valuelab.hedgeinvest.KIID.service.KIIDService (null) - testo3Col  G
+197  it.valuelab.hedgeinvest.KIID.service.KIIDService (null) - commissioniRendimentoCol  L
+197  it.valuelab.hedgeinvest.KIID.service.KIIDService (null) - informazionipraticheCol  M
+201  it.valuelab.hedgeinvest.KIID.service.KIIDService (null) - Termine lettura dati input - Dati fondi
+204  it.valuelab.hedgeinvest.KIID.service.KIIDService (null) - Inizio generazione documento 1 di 9 D:\TEMP\KIID_HICU_IT_EUR DM Shares_IT_IT_23 11 2016.docx
+675  it.valuelab.hedgeinvest.helpers.WordHelper (null) - REMOVED ROW
+3431 it.valuelab.hedgeinvest.KIID.service.KIIDService (null) - Generazione documento 1 di 9 D:\TEMP\KIID_HICU_IT_EUR DM Shares_IT_IT_23 11 2016.docx terminata
+3432 it.valuelab.hedgeinvest.KIID.service.KIIDService (null) - Inizio generazione documento 2 di 9 D:\TEMP\KIID_HICU_IT_EUR R Shares_IT_IT_23 11 2016.docx
+3611 it.valuelab.hedgeinvest.helpers.WordHelper (null) - REMOVED ROW
+4961 it.valuelab.hedgeinvest.KIID.service.KIIDService (null) - Generazione documento 2 di 9 D:\TEMP\KIID_HICU_IT_EUR R Shares_IT_IT_23 11 2016.docx terminata
+4961 it.valuelab.hedgeinvest.KIID.service.KIIDService (null) - Inizio generazione documento 3 di 9 D:\TEMP\KIID_HICU_IT_USD R Shares_IT_IT_23 11 2016.docx
+5238 it.valuelab.hedgeinvest.helpers.WordHelper (null) - REMOVED ROW
+7894 it.valuelab.hedgeinvest.KIID.service.KIIDService (null) - Generazione documento 3 di 9 D:\TEMP\KIID_HICU_IT_USD R Shares_IT_IT_23 11 2016.docx terminata
+7894 it.valuelab.hedgeinvest.KIID.service.KIIDService (null) - Inizio generazione documento 4 di 9 D:\TEMP\KIID_HICU_IT_USD DM Shares_IT_IT_23 11 2016.docx
+8170 it.valuelab.hedgeinvest.helpers.WordHelper (null) - REMOVED ROW
+10798 it.valuelab.hedgeinvest.KIID.service.KIIDService (null) - Generazione documento 4 di 9 D:\TEMP\KIID_HICU_IT_USD DM Shares_IT_IT_23 11 2016.docx terminata
+10798 it.valuelab.hedgeinvest.KIID.service.KIIDService (null) - Inizio generazione documento 5 di 9 D:\TEMP\KIID_HICU_IT_CHF DM Shares_IT_IT_23 11 2016.docx
+11085 it.valuelab.hedgeinvest.helpers.WordHelper (null) - REMOVED ROW
+13717 it.valuelab.hedgeinvest.KIID.service.KIIDService (null) - Generazione documento 5 di 9 D:\TEMP\KIID_HICU_IT_CHF DM Shares_IT_IT_23 11 2016.docx terminata
+13718 it.valuelab.hedgeinvest.KIID.service.KIIDService (null) - Inizio generazione documento 6 di 9 D:\TEMP\KIID_HICU_IT_CHF R Shares_IT_IT_23 11 2016.docx
+14163 it.valuelab.hedgeinvest.helpers.WordHelper (null) - REMOVED ROW
+17042 it.valuelab.hedgeinvest.KIID.service.KIIDService (null) - Generazione documento 6 di 9 D:\TEMP\KIID_HICU_IT_CHF R Shares_IT_IT_23 11 2016.docx terminata
+17042 it.valuelab.hedgeinvest.KIID.service.KIIDService (null) - Inizio generazione documento 7 di 9 D:\TEMP\KIID_HICU_IT_EUR I Shares_IT_IT_23 11 2016.docx
+17293 it.valuelab.hedgeinvest.helpers.WordHelper (null) - REMOVED ROW
+19909 it.valuelab.hedgeinvest.KIID.service.KIIDService (null) - Generazione documento 7 di 9 D:\TEMP\KIID_HICU_IT_EUR I Shares_IT_IT_23 11 2016.docx terminata
+19909 it.valuelab.hedgeinvest.KIID.service.KIIDService (null) - Inizio generazione documento 8 di 9 D:\TEMP\KIID_HICU_IT_USD I Shares_IT_IT_23 11 2016.docx
+20252 it.valuelab.hedgeinvest.helpers.WordHelper (null) - REMOVED ROW
+22920 it.valuelab.hedgeinvest.KIID.service.KIIDService (null) - Generazione documento 8 di 9 D:\TEMP\KIID_HICU_IT_USD I Shares_IT_IT_23 11 2016.docx terminata
+22920 it.valuelab.hedgeinvest.KIID.service.KIIDService (null) - Inizio generazione documento 9 di 9 D:\TEMP\KIID_HICU_IT_CHF I Shares_IT_IT_23 11 2016.docx
+23349 it.valuelab.hedgeinvest.helpers.WordHelper (null) - REMOVED ROW
+26988 it.valuelab.hedgeinvest.KIID.service.KIIDService (null) - Generazione documento 9 di 9 D:\TEMP\KIID_HICU_IT_CHF I Shares_IT_IT_23 11 2016.docx terminata
+23 Nov 2016 12:29:24,816 it.valuelab.hedgeinvest.KIID.service.KIIDService - Inizio generazione documenti 
+23 Nov 2016 12:29:24,835 it.valuelab.hedgeinvest.KIID.service.KIIDService - Inizio lettura dati input
+23 Nov 2016 12:29:24,902 it.valuelab.hedgeinvest.KIID.service.KIIDService - Inizio lettura dati input - Performance
+23 Nov 2016 12:29:24,930 it.valuelab.hedgeinvest.KIID.service.KIIDService - Termine lettura dati input - Performance
+23 Nov 2016 12:29:24,931 it.valuelab.hedgeinvest.KIID.service.KIIDService - Inizio lettura dati input - Dati fondi
+23 Nov 2016 12:29:24,931 it.valuelab.hedgeinvest.KIID.service.KIIDService - Dati fondi: suffisso 
+23 Nov 2016 12:29:24,940 it.valuelab.hedgeinvest.KIID.service.KIIDService - testo1Col  E
+23 Nov 2016 12:29:24,941 it.valuelab.hedgeinvest.KIID.service.KIIDService - testo2Col  F
+23 Nov 2016 12:29:24,941 it.valuelab.hedgeinvest.KIID.service.KIIDService - testo3Col  G
+23 Nov 2016 12:29:24,941 it.valuelab.hedgeinvest.KIID.service.KIIDService - commissioniRendimentoCol  L
+23 Nov 2016 12:29:24,941 it.valuelab.hedgeinvest.KIID.service.KIIDService - informazionipraticheCol  M
+23 Nov 2016 12:29:24,947 it.valuelab.hedgeinvest.KIID.service.KIIDService - Termine lettura dati input - Dati fondi
+23 Nov 2016 12:29:25,053 it.valuelab.hedgeinvest.KIID.service.KIIDService - Inizio generazione documento 1 di 9 D:\TEMP\KIID_HICU_IT_EUR DM Shares_IT_IT_23 11 2016.docx
+23 Nov 2016 12:29:25,429 it.valuelab.hedgeinvest.helpers.WordHelper - REMOVED ROW
+23 Nov 2016 12:29:28,278 it.valuelab.hedgeinvest.KIID.service.KIIDService - Generazione documento 1 di 9 D:\TEMP\KIID_HICU_IT_EUR DM Shares_IT_IT_23 11 2016.docx terminata
+23 Nov 2016 12:29:28,279 it.valuelab.hedgeinvest.KIID.service.KIIDService - Inizio generazione documento 2 di 9 D:\TEMP\KIID_HICU_IT_EUR R Shares_IT_IT_23 11 2016.docx
+23 Nov 2016 12:29:28,516 it.valuelab.hedgeinvest.helpers.WordHelper - REMOVED ROW
+23 Nov 2016 12:29:31,137 it.valuelab.hedgeinvest.KIID.service.KIIDService - Generazione documento 2 di 9 D:\TEMP\KIID_HICU_IT_EUR R Shares_IT_IT_23 11 2016.docx terminata
+23 Nov 2016 12:29:31,138 it.valuelab.hedgeinvest.KIID.service.KIIDService - Inizio generazione documento 3 di 9 D:\TEMP\KIID_HICU_IT_USD R Shares_IT_IT_23 11 2016.docx
+23 Nov 2016 12:29:31,384 it.valuelab.hedgeinvest.helpers.WordHelper - REMOVED ROW
+23 Nov 2016 12:29:34,013 it.valuelab.hedgeinvest.KIID.service.KIIDService - Generazione documento 3 di 9 D:\TEMP\KIID_HICU_IT_USD R Shares_IT_IT_23 11 2016.docx terminata
+23 Nov 2016 12:29:34,014 it.valuelab.hedgeinvest.KIID.service.KIIDService - Inizio generazione documento 4 di 9 D:\TEMP\KIID_HICU_IT_USD DM Shares_IT_IT_23 11 2016.docx
+23 Nov 2016 12:29:34,249 it.valuelab.hedgeinvest.helpers.WordHelper - REMOVED ROW
+23 Nov 2016 12:29:36,947 it.valuelab.hedgeinvest.KIID.service.KIIDService - Generazione documento 4 di 9 D:\TEMP\KIID_HICU_IT_USD DM Shares_IT_IT_23 11 2016.docx terminata
+23 Nov 2016 12:29:36,948 it.valuelab.hedgeinvest.KIID.service.KIIDService - Inizio generazione documento 5 di 9 D:\TEMP\KIID_HICU_IT_CHF DM Shares_IT_IT_23 11 2016.docx
+23 Nov 2016 12:29:37,246 it.valuelab.hedgeinvest.helpers.WordHelper - REMOVED ROW
+23 Nov 2016 12:29:39,881 it.valuelab.hedgeinvest.KIID.service.KIIDService - Generazione documento 5 di 9 D:\TEMP\KIID_HICU_IT_CHF DM Shares_IT_IT_23 11 2016.docx terminata
+23 Nov 2016 12:29:39,881 it.valuelab.hedgeinvest.KIID.service.KIIDService - Inizio generazione documento 6 di 9 D:\TEMP\KIID_HICU_IT_CHF R Shares_IT_IT_23 11 2016.docx
+23 Nov 2016 12:29:40,250 it.valuelab.hedgeinvest.helpers.WordHelper - REMOVED ROW
+23 Nov 2016 12:29:42,946 it.valuelab.hedgeinvest.KIID.service.KIIDService - Generazione documento 6 di 9 D:\TEMP\KIID_HICU_IT_CHF R Shares_IT_IT_23 11 2016.docx terminata
+23 Nov 2016 12:29:42,946 it.valuelab.hedgeinvest.KIID.service.KIIDService - Inizio generazione documento 7 di 9 D:\TEMP\KIID_HICU_IT_EUR I Shares_IT_IT_23 11 2016.docx
+23 Nov 2016 12:29:43,157 it.valuelab.hedgeinvest.helpers.WordHelper - REMOVED ROW
+23 Nov 2016 12:29:45,782 it.valuelab.hedgeinvest.KIID.service.KIIDService - Generazione documento 7 di 9 D:\TEMP\KIID_HICU_IT_EUR I Shares_IT_IT_23 11 2016.docx terminata
+23 Nov 2016 12:29:45,783 it.valuelab.hedgeinvest.KIID.service.KIIDService - Inizio generazione documento 8 di 9 D:\TEMP\KIID_HICU_IT_USD I Shares_IT_IT_23 11 2016.docx
+23 Nov 2016 12:29:45,997 it.valuelab.hedgeinvest.helpers.WordHelper - REMOVED ROW
+23 Nov 2016 12:29:48,565 it.valuelab.hedgeinvest.KIID.service.KIIDService - Generazione documento 8 di 9 D:\TEMP\KIID_HICU_IT_USD I Shares_IT_IT_23 11 2016.docx terminata
+23 Nov 2016 12:29:48,566 it.valuelab.hedgeinvest.KIID.service.KIIDService - Inizio generazione documento 9 di 9 D:\TEMP\KIID_HICU_IT_CHF I Shares_IT_IT_23 11 2016.docx
+23 Nov 2016 12:29:48,908 it.valuelab.hedgeinvest.helpers.WordHelper - REMOVED ROW
+23 Nov 2016 12:29:51,474 it.valuelab.hedgeinvest.KIID.service.KIIDService - Generazione documento 9 di 9 D:\TEMP\KIID_HICU_IT_CHF I Shares_IT_IT_23 11 2016.docx terminata
+[INFO - 63] 23 Nov 2016 12:30:52,379 it.valuelab.hedgeinvest.KIID.service.KIIDService - Inizio generazione documenti 
+[INFO - 69] 23 Nov 2016 12:30:52,410 it.valuelab.hedgeinvest.KIID.service.KIIDService - Inizio lettura dati input
+[INFO - 74] 23 Nov 2016 12:30:52,478 it.valuelab.hedgeinvest.KIID.service.KIIDService - Inizio lettura dati input - Performance
+[INFO - 112] 23 Nov 2016 12:30:52,506 it.valuelab.hedgeinvest.KIID.service.KIIDService - Termine lettura dati input - Performance
+[INFO - 113] 23 Nov 2016 12:30:52,506 it.valuelab.hedgeinvest.KIID.service.KIIDService - Inizio lettura dati input - Dati fondi
+[INFO - 120] 23 Nov 2016 12:30:52,507 it.valuelab.hedgeinvest.KIID.service.KIIDService - Dati fondi: suffisso 
+[DEBUG - 136] 23 Nov 2016 12:30:52,515 it.valuelab.hedgeinvest.KIID.service.KIIDService - testo1Col  E
+[DEBUG - 137] 23 Nov 2016 12:30:52,516 it.valuelab.hedgeinvest.KIID.service.KIIDService - testo2Col  F
+[DEBUG - 138] 23 Nov 2016 12:30:52,516 it.valuelab.hedgeinvest.KIID.service.KIIDService - testo3Col  G
+[DEBUG - 139] 23 Nov 2016 12:30:52,516 it.valuelab.hedgeinvest.KIID.service.KIIDService - commissioniRendimentoCol  L
+[DEBUG - 140] 23 Nov 2016 12:30:52,516 it.valuelab.hedgeinvest.KIID.service.KIIDService - informazionipraticheCol  M
+[INFO - 171] 23 Nov 2016 12:30:52,520 it.valuelab.hedgeinvest.KIID.service.KIIDService - Termine lettura dati input - Dati fondi
+[INFO - 184] 23 Nov 2016 12:30:52,623 it.valuelab.hedgeinvest.KIID.service.KIIDService - Inizio generazione documento 1 di 9 D:\TEMP\KIID_HICU_IT_EUR DM Shares_IT_IT_23 11 2016.docx
+[DEBUG - 57] 23 Nov 2016 12:30:53,001 it.valuelab.hedgeinvest.helpers.WordHelper - REMOVED ROW
+[INFO - 207] 23 Nov 2016 12:30:55,767 it.valuelab.hedgeinvest.KIID.service.KIIDService - Generazione documento 1 di 9 D:\TEMP\KIID_HICU_IT_EUR DM Shares_IT_IT_23 11 2016.docx terminata
+[INFO - 184] 23 Nov 2016 12:30:55,768 it.valuelab.hedgeinvest.KIID.service.KIIDService - Inizio generazione documento 2 di 9 D:\TEMP\KIID_HICU_IT_EUR R Shares_IT_IT_23 11 2016.docx
+[DEBUG - 57] 23 Nov 2016 12:30:56,001 it.valuelab.hedgeinvest.helpers.WordHelper - REMOVED ROW
+[INFO - 207] 23 Nov 2016 12:30:58,611 it.valuelab.hedgeinvest.KIID.service.KIIDService - Generazione documento 2 di 9 D:\TEMP\KIID_HICU_IT_EUR R Shares_IT_IT_23 11 2016.docx terminata
+[INFO - 184] 23 Nov 2016 12:30:58,612 it.valuelab.hedgeinvest.KIID.service.KIIDService - Inizio generazione documento 3 di 9 D:\TEMP\KIID_HICU_IT_USD R Shares_IT_IT_23 11 2016.docx
+[DEBUG - 57] 23 Nov 2016 12:30:58,809 it.valuelab.hedgeinvest.helpers.WordHelper - REMOVED ROW
+[INFO - 207] 23 Nov 2016 12:31:01,584 it.valuelab.hedgeinvest.KIID.service.KIIDService - Generazione documento 3 di 9 D:\TEMP\KIID_HICU_IT_USD R Shares_IT_IT_23 11 2016.docx terminata
+[INFO - 184] 23 Nov 2016 12:31:01,585 it.valuelab.hedgeinvest.KIID.service.KIIDService - Inizio generazione documento 4 di 9 D:\TEMP\KIID_HICU_IT_USD DM Shares_IT_IT_23 11 2016.docx
+[DEBUG - 57] 23 Nov 2016 12:31:01,841 it.valuelab.hedgeinvest.helpers.WordHelper - REMOVED ROW
+[INFO - 207] 23 Nov 2016 12:31:04,502 it.valuelab.hedgeinvest.KIID.service.KIIDService - Generazione documento 4 di 9 D:\TEMP\KIID_HICU_IT_USD DM Shares_IT_IT_23 11 2016.docx terminata
+[INFO - 184] 23 Nov 2016 12:31:04,503 it.valuelab.hedgeinvest.KIID.service.KIIDService - Inizio generazione documento 5 di 9 D:\TEMP\KIID_HICU_IT_CHF DM Shares_IT_IT_23 11 2016.docx
+[DEBUG - 57] 23 Nov 2016 12:31:04,827 it.valuelab.hedgeinvest.helpers.WordHelper - REMOVED ROW
+[INFO - 207] 23 Nov 2016 12:31:07,545 it.valuelab.hedgeinvest.KIID.service.KIIDService - Generazione documento 5 di 9 D:\TEMP\KIID_HICU_IT_CHF DM Shares_IT_IT_23 11 2016.docx terminata
+[INFO - 184] 23 Nov 2016 12:31:07,547 it.valuelab.hedgeinvest.KIID.service.KIIDService - Inizio generazione documento 6 di 9 D:\TEMP\KIID_HICU_IT_CHF R Shares_IT_IT_23 11 2016.docx
+[DEBUG - 57] 23 Nov 2016 12:31:07,789 it.valuelab.hedgeinvest.helpers.WordHelper - REMOVED ROW
+[INFO - 207] 23 Nov 2016 12:31:10,438 it.valuelab.hedgeinvest.KIID.service.KIIDService - Generazione documento 6 di 9 D:\TEMP\KIID_HICU_IT_CHF R Shares_IT_IT_23 11 2016.docx terminata
+[INFO - 184] 23 Nov 2016 12:31:10,439 it.valuelab.hedgeinvest.KIID.service.KIIDService - Inizio generazione documento 7 di 9 D:\TEMP\KIID_HICU_IT_EUR I Shares_IT_IT_23 11 2016.docx
+[DEBUG - 57] 23 Nov 2016 12:31:10,685 it.valuelab.hedgeinvest.helpers.WordHelper - REMOVED ROW
+[INFO - 207] 23 Nov 2016 12:31:13,274 it.valuelab.hedgeinvest.KIID.service.KIIDService - Generazione documento 7 di 9 D:\TEMP\KIID_HICU_IT_EUR I Shares_IT_IT_23 11 2016.docx terminata
+[INFO - 184] 23 Nov 2016 12:31:13,274 it.valuelab.hedgeinvest.KIID.service.KIIDService - Inizio generazione documento 8 di 9 D:\TEMP\KIID_HICU_IT_USD I Shares_IT_IT_23 11 2016.docx
+[DEBUG - 57] 23 Nov 2016 12:31:13,567 it.valuelab.hedgeinvest.helpers.WordHelper - REMOVED ROW
+[INFO - 207] 23 Nov 2016 12:31:16,132 it.valuelab.hedgeinvest.KIID.service.KIIDService - Generazione documento 8 di 9 D:\TEMP\KIID_HICU_IT_USD I Shares_IT_IT_23 11 2016.docx terminata
+[INFO - 184] 23 Nov 2016 12:31:16,133 it.valuelab.hedgeinvest.KIID.service.KIIDService - Inizio generazione documento 9 di 9 D:\TEMP\KIID_HICU_IT_CHF I Shares_IT_IT_23 11 2016.docx
+[DEBUG - 57] 23 Nov 2016 12:31:16,392 it.valuelab.hedgeinvest.helpers.WordHelper - REMOVED ROW
+[INFO - 207] 23 Nov 2016 12:31:19,003 it.valuelab.hedgeinvest.KIID.service.KIIDService - Generazione documento 9 di 9 D:\TEMP\KIID_HICU_IT_CHF I Shares_IT_IT_23 11 2016.docx terminata

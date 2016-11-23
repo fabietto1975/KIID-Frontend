@@ -135,13 +135,13 @@
       <dsig:DigestValue>+sBwVndvk7/u2sXhHy+HV12GwZpWWCQc2iG1L2gaNm4=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="KIID-Frontend.exe.config" size="2096">
+  <file name="KIID-Frontend.exe.config" size="2120">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>hjQbk+XEQL5HkbWFKC3ecPZgzEurIs+U9BtuW1aOT+8=</dsig:DigestValue>
+      <dsig:DigestValue>XYQsNvLfuJho+PpVOS4ilMrdBS3vlzSDw6UZ4OQ9ktM=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>
