@@ -8,7 +8,7 @@
         xmlns:sys="clr-namespace:System;assembly=mscorlib"
         Title="Genera Kiids" Height="350" Width="350" ResizeMode="NoResize" Icon="kiid.ico">
     <Window.Resources>
-        <XmlDataProvider x:Key="XmlData" Source="lingue.xml" XPath="Lingue"/>        
+       
     </Window.Resources>
     <Grid Margin="0,0,0,0" Background="AliceBlue">
         <Grid.ColumnDefinitions>
@@ -16,23 +16,23 @@
             <ColumnDefinition Width="121*"/>
         </Grid.ColumnDefinitions>
 
-        <ComboBox  x:Name="cboLingua" HorizontalAlignment="Left" Margin="158.556,115,0,0" VerticalAlignment="Top" Width="56" 
-                   SelectedIndex="0" ItemsSource="{Binding Source={StaticResource XmlData}, XPath=./Lingua}" DisplayMemberPath="@Name" SelectedValuePath="@Value" Grid.Column="1" >
+        <ComboBox  x:Name="cboLingua" HorizontalAlignment="Left" Margin="151,108,0,0" VerticalAlignment="Top" Width="65" 
+                   SelectedIndex="0"  DisplayMemberPath="@Name" SelectedValuePath="@Value" Grid.Column="1" SelectionChanged="cboLingua_SelectionChanged" >
             <ComboBox.Effect>
                 <DropShadowEffect/>
             </ComboBox.Effect>
         </ComboBox>
-        <DatePicker x:Name="datePick"  HorizontalAlignment="Left" Margin="75.556,88,0,0"  SelectedDate="{x:Static sys:DateTime.Now}" VerticalAlignment="Top" Height="22" Grid.Column="1">
+        <DatePicker x:Name="datePick"  HorizontalAlignment="Left" Margin="77,81,0,0"  SelectedDate="{x:Static sys:DateTime.Now}" VerticalAlignment="Top" Height="22" Grid.Column="1">
             <DatePicker.Effect>
                 <DropShadowEffect/>
             </DatePicker.Effect>
         </DatePicker>
-        <Button Content="Scegli Template" HorizontalAlignment="Left" Height="35" Margin="21,165,0,0" VerticalAlignment="Top" Width="102" Click="BtnScegliWord" Grid.ColumnSpan="2">
+        <Button Content="Scegli Template" HorizontalAlignment="Left" Height="35" Margin="21,160,0,0" VerticalAlignment="Top" Width="102" Click="BtnScegliWord" Grid.ColumnSpan="2">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
         </Button>
-        <Button Content="Scegli File Dati" HorizontalAlignment="Left" Height="35" Margin="21,209,0,0" VerticalAlignment="Top" Width="102" Click="BtnScegliExcel" Grid.ColumnSpan="2">
+        <Button Content="Scegli File Dati" HorizontalAlignment="Left" Height="35" Margin="21,200,0,0" VerticalAlignment="Top" Width="102" Click="BtnScegliExcel" Grid.ColumnSpan="2">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
@@ -42,9 +42,9 @@
                 <DropShadowEffect/>
             </Button.Effect>
         </Button>
-        <Label x:Name="lblTitolo" Content="Generazione KIIDS"  HorizontalContentAlignment="Center" Height="45" Margin="0,31,-1,0" VerticalAlignment="Top" FontSize="24" Grid.ColumnSpan="2"/>
-        <Label Content="Data Kiids" HorizontalAlignment="Left" Margin="21,93,0,0" VerticalAlignment="Top"/>
-        <Label Content="Lingua Kiids" HorizontalAlignment="Left" Margin="21,119,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblTitolo" Content="Generazione KIID"  HorizontalContentAlignment="Center" Height="45" Margin="0,31,-1,0" VerticalAlignment="Top" FontSize="24" Grid.ColumnSpan="2"/>
+        <Label Content="Data Kiids" HorizontalAlignment="Left" Margin="21,81,0,0" VerticalAlignment="Top"/>
+        <Label Content="Lingua Kiids" HorizontalAlignment="Left" Margin="21,112,0,0" VerticalAlignment="Top"/>
         <Label x:Name="lblTemplate" Content="-" HorizontalAlignment="Left" Margin="75.556,165,0,0" VerticalAlignment="Top" Width="140" Grid.Column="1"/>
         <Label x:Name="lblDataFile" Content="-" HorizontalAlignment="Left" Margin="75.556,213,0,0" VerticalAlignment="Top" Width="140" Grid.Column="1"/>
         <ToolBarTray Background="DarkGray" Height="30" IsLocked="True" VerticalAlignment="Top" Grid.ColumnSpan="2">
@@ -67,9 +67,9 @@
                 <DropShadowEffect/>
             </ProgressBar.Effect>
         </ProgressBar>
-        <Label  x:Name="lblError" Background="Aquamarine" Foreground="Red"  HorizontalAlignment="Left" Margin="21,253,0,0" VerticalAlignment="Top" Width="313" Grid.ColumnSpan="2" Height="56">
+        <Label  x:Name="lblError" Background="Aquamarine" Foreground="Red"  HorizontalAlignment="Left" Margin="21,253,0,0" VerticalAlignment="Top" Width="297" Grid.ColumnSpan="2" Height="56">
             <TextBlock x:Name="txtError" TextWrapping="WrapWithOverflow" Text="{Binding error, UpdateSourceTrigger=PropertyChanged}" >
-                
+
             </TextBlock>
             <Label.Effect>
                 <DropShadowEffect/>

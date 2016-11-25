@@ -91,6 +91,17 @@ namespace KIID_Frontend
             lblError.Visibility = Visibility.Hidden;
             txtError.DataContext = service;
             lblError.DataContext = service;
+
+            
+            XmlDataProvider lingueXml = new XmlDataProvider();
+            lingueXml.Source = new Uri(@"lingue.xml",UriKind.Relative);
+            lingueXml.XPath = "Lingue";        
+            Binding bind = new Binding();
+            bind.Source = lingueXml;
+            bind.XPath = "./Lingua";
+            cboLingua.SetBinding(ComboBox.ItemsSourceProperty, bind);
+            lingueXml.Refresh();
+
         }
 
         private void BtnScegliWord(object sender, RoutedEventArgs e)
@@ -171,18 +182,11 @@ namespace KIID_Frontend
 
         private void ButtonDatiFissi_Click(object sender, RoutedEventArgs e)
         {
-            StringBuilder sb = new StringBuilder();
-            FiledatiXML fileXml = new FiledatiXML("datifissi.xml");
-            LeggeDatiDafileXml(sb, fileXml);
-            MessageBox.Show(sb.ToString(), "Dati Fissi");
-        }
-
-        private void LeggeDatiDafileXml(StringBuilder sb, FiledatiXML fileXml)
-        {
-            if (fileXml.fileTrovato)
+            FiledatiXML datiFissi = new FiledatiXML("datifissi.xml");
+            if (datiFissi.fileTrovato)
             {
-                Dictionary<string, string> elenco = fileXml.GetElencoValori();
-
+                Dictionary<string, string> elenco = datiFissi.GetElencoValori();
+                StringBuilder sb = new StringBuilder();
                 foreach (var item in elenco)
                 {
                     sb.Append(item.Key);
@@ -190,7 +194,7 @@ namespace KIID_Frontend
                     sb.Append(item.Value);
                     sb.Append(Environment.NewLine);
                 }
-
+                MessageBox.Show(sb.ToString(), "Dati Fissi");
             }
             else
             {
@@ -212,13 +216,20 @@ namespace KIID_Frontend
             StringBuilder sb = new StringBuilder();
             foreach (System.Xml.XmlElement item in cboLingua.Items)
             {
-                sb.Append(item.Attributes["Name"].Value.ToString());
-                sb.Append(" - ");
-                sb.Append(item.Attributes["Value"].Value.ToString());
-                sb.Append(Environment.NewLine);
-
+                sb.Append( item.Attributes["Name"].Value.ToString());
+                sb.Append( " ; ");
+                sb.Append( item.Attributes["Value"].Value.ToString());
+                sb.Append( Environment.NewLine);
             }
-            MessageBox.Show(sb.ToString());
+            MessageBox.Show(sb.ToString(),"ComboBox Lingue",MessageBoxButton.OK);
+        }
+
+        private void cboLingua_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (cboLingua.SelectedIndex==-1)
+            {
+                cboLingua.SelectedIndex = 0;
+            }
         }
 
     }
