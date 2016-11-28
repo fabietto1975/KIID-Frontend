@@ -92,16 +92,24 @@ namespace KIID_Frontend
             txtError.DataContext = service;
             lblError.DataContext = service;
 
-            
+            caricaLingue();
+            //MessageBox.Show(lingueXml.Source.AbsoluteUri);
+
+        }
+
+        private void caricaLingue()
+        {
+
             XmlDataProvider lingueXml = new XmlDataProvider();
-            lingueXml.Source = new Uri(@"lingue.xml",UriKind.Relative);
-            lingueXml.XPath = "Lingue";        
+            string path = System.Reflection.Assembly.GetExecutingAssembly().Location;
+            var directory = System.IO.Path.GetDirectoryName(path);
+            lingueXml.Source = new Uri(directory + "/lingue.xml", UriKind.Absolute);
+            lingueXml.XPath = "Lingue";
             Binding bind = new Binding();
             bind.Source = lingueXml;
             bind.XPath = "./Lingua";
             cboLingua.SetBinding(ComboBox.ItemsSourceProperty, bind);
             lingueXml.Refresh();
-
         }
 
         private void BtnScegliWord(object sender, RoutedEventArgs e)
@@ -216,17 +224,17 @@ namespace KIID_Frontend
             StringBuilder sb = new StringBuilder();
             foreach (System.Xml.XmlElement item in cboLingua.Items)
             {
-                sb.Append( item.Attributes["Name"].Value.ToString());
-                sb.Append( " ; ");
-                sb.Append( item.Attributes["Value"].Value.ToString());
-                sb.Append( Environment.NewLine);
+                sb.Append(item.Attributes["Name"].Value.ToString());
+                sb.Append(" ; ");
+                sb.Append(item.Attributes["Value"].Value.ToString());
+                sb.Append(Environment.NewLine);
             }
-            MessageBox.Show(sb.ToString(),"ComboBox Lingue",MessageBoxButton.OK);
+            MessageBox.Show(sb.ToString(), "ComboBox Lingue", MessageBoxButton.OK);
         }
 
         private void cboLingua_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if (cboLingua.SelectedIndex==-1)
+            if (cboLingua.SelectedIndex == -1)
             {
                 cboLingua.SelectedIndex = 0;
             }
